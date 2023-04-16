@@ -122,8 +122,8 @@ export const ToastProvider = (props: ToastProviderProps) => {
     const toasts = state[position]
 
     return (
-      <ul
-        role="region"
+      <div
+        role="alert"
         aria-live="polite"
         key={position}
         id={`chakra-toast-manager-${position}`}
@@ -138,7 +138,7 @@ export const ToastProvider = (props: ToastProviderProps) => {
             />
           ))}
         </AnimatePresence>
-      </ul>
+      </div>
     )
   })
 
